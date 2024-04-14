@@ -1,0 +1,1096 @@
+{
+	"info": {
+		"_postman_id": "0ca333b2-17ce-4631-a628-69b5c5420516",
+		"name": "EcoRewards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4359992",
+		"_collection_link": "https://bold-eclipse-374999-1.postman.co/workspace/ISW-811~9b425535-1c68-4323-a2f6-ad0273d0fd3f/collection/4359992-0ca333b2-17ce-4631-a628-69b5c5420516?action=share&source=collection_link&creator=4359992"
+	},
+	"item": [
+		{
+			"name": "Center",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/center",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"center"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/center/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"center",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/center/user/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"center",
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Centro de Reciclaje ABC\",\r\n  \"province\": \"San Jose\",\r\n  \"canton\": \"Escazu\",\r\n  \"district\": \"San Antonio\",\r\n  \"exact_address\": \"Calle Principal, #123\",\r\n  \"phone\": \"123-456-7890\",\r\n  \"operating_hours\": \"Lunes a Viernes, 9 AM - 5 PM\",\r\n  \"administrator_userID\": 2,\r\n  \"accepted_materials\": [ { \"materialID\": 1 }, { \"materialID\": 2 } ]\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/center/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"center",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMaterialByCenter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/center/material",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"center",
+								"material"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Centro de Reciclaje ABC TEST\",\r\n  \"province\": \"San Jose\",\r\n  \"canton\": \"Escazu\",\r\n  \"district\": \"San Antonio\",\r\n  \"exact_address\": \"Calle Principal, #123\",\r\n  \"phone\": \"123-456-7890\",\r\n  \"operating_hours\": \"Lunes a Viernes, 9 AM - 5 PM\",\r\n  \"administrator_userID\": 4,\r\n  \"Center_Material\": [\r\n     { \"centerID\": 1, \"materialID\": 1 },\r\n      { \"centerID\": 1, \"materialID\": 3 }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/center/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"center",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCouponByUseId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/1/coupons",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"1",
+								"coupons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserByRole",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/role/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"role",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"email\": \"prueba@prueba.com\",\r\n    \"password\":\"Uno@2345\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/login/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recyclable Material",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/material/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"material",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetbById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/material/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"material",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMaterialByUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/material/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"material",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Paper Test\",\r\n  \"description\": \"Material made of paper Test\",\r\n  \"image\": \"base64encodedimage\",\r\n  \"unit_of_measure\": \"kilogram Test\",\r\n  \"price\": 5.0,\r\n  \"color_representation\": \"#016AAE\",\r\n  \"centerID\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/material",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"material"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"UpdatedMaterialName\",\r\n  \"description\": \"UpdatedMaterialDescription\",\r\n  \"image\": \"updated_image.png\",\r\n  \"unit_of_measure\": \"UpdatedMeasureUnit\",\r\n  \"price\": 10,\r\n  \"color_representation\": \"#FF0000\",\r\n  \"centerID\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/material/13",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"material",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/material/14",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"material",
+								"14"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/address/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"address",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllAddressesByUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/address/getAllAddressesByUserId/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"address",
+								"getAllAddressesByUserId",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByAddressId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/address/getByAddressId/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"address",
+								"getByAddressId",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": 1,\r\n  \"provinceId\": \"P001\",\r\n  \"province\": \"YourProvince\",\r\n  \"cantonId\": \"C001\",\r\n  \"canton\": \"YourCanton\",\r\n  \"districtId\": \"D001\",\r\n  \"district\": \"YourDistrict\",\r\n  \"exact_address\": \"YourExactAddress\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/address",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"provinceId\": \"UpdatedP001\",\r\n  \"province\": \"UpdatedProvince\",\r\n  \"cantonId\": \"UpdatedC001\",\r\n  \"canton\": \"UpdatedCanton\",\r\n  \"districtId\": \"UpdatedD001\",\r\n  \"district\": \"UpdatedDistrict\",\r\n  \"exact_address\": \"UpdatedExactAddress\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/address/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"address",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/address:1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"address:1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recyclable Material Exchange",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/materialexchange/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"materialexchange",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/materialexchange/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"materialexchange",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/materialexchange/exchangesByUserid/4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"materialexchange",
+								"exchangesByUserid",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByCenterId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/materialexchange/center/4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"materialexchange",
+								"center",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByAdmin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/materialexchange/center/4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"materialexchange",
+								"center",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/materialexchange/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"materialexchange",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EcoCoins",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/ecocoins",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ecocoins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/ecocoins/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ecocoins",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByClientId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/ecocoins/getByClientId/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ecocoins",
+								"getByClientId",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ManageEcoCoins",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"clientUserId\": 3,\r\n  \"balance\": 100.0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/ecocoins/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ecocoins",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DecrementEcoCoins",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"clientUserId\": 3,\r\n  \"balance\": 25.0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/ecocoins/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ecocoins",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CouponExchange",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/couponexchange/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"couponexchange",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/couponexchange/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"couponexchange",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Nuevo Cupón\",\r\n  \"description\": \"Descripción del nuevo cupón\",\r\n  \"image\": \"URL de la imagen\",\r\n  \"category\": \"Categoría del cupón\",\r\n  \"startValidityDate\": \"2023-01-01T00:00:00.000Z\",\r\n  \"endValidityDate\": \"2023-12-31T23:59:59.999Z\",\r\n  \"ecoCoinsRequired\": 10.5\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/couponexchange/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"couponexchange",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/couponexchange/4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"couponexchange",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CouponExchangeHistory",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/couponexchangehistory/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"couponexchangehistory",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/couponexchangehistory/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"couponexchangehistory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/couponexchangehistory/getByUserId/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"couponexchangehistory",
+								"getByUserId",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recyclable Exchange Material Details",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/exchangematerialdetails/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"exchangematerialdetails",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/exchangematerialdetails/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"exchangematerialdetails",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"exchangeId\": 1,\r\n  \"materialId\": 2,\r\n  \"quantity\": 3.5,\r\n  \"ecoCoins\": 10.0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/exchangematerialdetails/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"exchangematerialdetails",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateMany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"exchangeId\": 1,\r\n  \"materialId\": 2,\r\n  \"quantity\": 3.5,\r\n  \"ecoCoins\": 10.0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/exchangematerialdetails/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"exchangematerialdetails",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
